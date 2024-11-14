@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Статистика</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend><a href="#" target="_self">Статистика</a></legend>
+        <ul>
+          <li><a href="earned_game.html" target="_self">Самая продаваемая настольная игра</a></li>
+          <li><a href="main.html" target="_self">Главная страница</a></li>
+        </ul>
+      </fieldset>
+    </form>
+
+    <details>
+      <summary>График</summary>
+      <form>
+        <table>
+          <tr>
+            <th>Значение по оси OX</th>
+            <th>Результат</th>
+          </tr>
+          <tr>
+            <td><input type="radio" name="OX" value="company">Компания производитель</td>
+            <td><input type="checkbox" name="result" value="max">Максимальная цена</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="OX" value="type">Тип настольной игры</td>
+            <td><input type="checkbox" name="result" value="min">Минимальная цена</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="OX" value="year">Год</td>
+            <td><input type="checkbox" name="result" value="players">Количество игроков</td>
+          </tr>
+        </table>
+        <input type="button" value="Построить">
+      </form>
+      <p>Здесь будет график</p>
+    </details>
+
+    <details>
+      <summary>Фильтр</summary>
+      <form>
+        <label>
+          Название: <input type="text" name="name"><br>
+        </label>
+        <label>
+          Тип:<input type="text" name="type"><br>
+        </label>
+        <label>
+          Количество игроков: от <input type="number" name="min" min="1" max="20">
+        </label>
+        <label>
+          до <input type="number" name="max" min="1" max="20"><br>
+        </label>
+        <label>
+          Цена: от <input type="number" name="min_price" min="0">
+        </label>
+        <label>
+          до <input type="number" name="max_price" min="0"><br>
+        </label>
+        <input type="button" value="Найти">
+      </form>
+    </details>
+
+    <details>
+      <summary>Сортировка</summary>
+      <form>
+        <label>
+          Первый уровень:
+          <select name="parametr_1">
+            <option value="0">Год</option>
+            <option value="1">Цена</option>
+            <option value="2">Количество игроков</option>
+          </select>
+        </label>
+        <label>По убыванию? <input type="checkbox" name="decreasing" value="0"></label>
+        <br>
+
+        <label>
+          Второй уровень:
+          <select name="parametr_2">
+            <option value="0">Год</option>
+            <option value="1">Цена</option>
+            <option value="2">Количество игроков</option>
+          </select>
+        </label>
+        <label>По убыванию? <input type="checkbox" name="decreasing" value="1"></label>
+        <br>
+
+        <label>
+          Третий уровень:
+          <select name="parametr_3">
+            <option value="0">Год</option>
+            <option value="1">Цена</option>
+            <option value="2">Количество игроков</option>
+          </select>
+        </label>
+        <label>По убыванию? <input type="checkbox" name="decreasing" value="2"></label>
+        <br>
+        <input type="button" value="Сортировать">
+      </form>
+    </details>
+
+    <table align="center" border=4>
+      <thead>
+        <tr>
+          <th>Название игры</th>
+          <th>Компания-пороизводитель</th>
+          <th>Год выпуска</th>
+          <th>Цена(руб.)</th>
+          <th>Мин.игроков</th>
+          <th>Макс.игроков</th>
+          <th>Рейтинг</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Катан</td>
+          <td>Kosmos</td>
+          <td>1995</td>
+          <td>3500</td>
+          <td>3</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Ужас Аркхема</td>
+          <td>Fantasy Flight Games</td>
+          <td>2005</td>
+          <td>5500</td>
+          <td>1</td>
+          <td>8</td>
+          <td>14+</td>
+        </tr>
+        <tr>
+          <td>Диксит</td>
+          <td>Libellud</td>
+          <td>2008</td>
+          <td>3000</td>
+          <td>3</td>
+          <td>6</td>
+          <td>8+</td>
+        </tr>
+        <tr>
+          <td>Билет на поезд</td>
+          <td>Days of Wonder</td>
+          <td>2004</td>
+          <td>4000</td>
+          <td>2</td>
+          <td>5</td>
+          <td>8+</td>
+        </tr>
+        <tr>
+          <td>7 чудес</td>
+          <td>Repos Production</td>
+          <td>2010</td>
+          <td>4500</td>
+          <td>3</td>
+          <td>7</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Каркассон</td>
+          <td>Hans im Glück</td>
+          <td>2000</td>
+          <td>2500</td>
+          <td>2</td>
+          <td>5</td>
+          <td>7+</td>
+        </tr>
+        <tr>
+          <td>Terra Mystica	</td>
+          <td>Feuerland Spiele	</td>
+          <td>2016</td>
+          <td>6000</td>
+          <td>2</td>
+          <td>5</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Azul</td>
+          <td>Plan B Games	</td>
+          <td>2017</td>
+          <td>3200</td>
+          <td>2</td>
+          <td>5</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Pandemic</td>
+          <td>Z-Man Games	</td>
+          <td>2008</td>
+          <td>4000</td>
+          <td>2</td>
+          <td>4</td>
+          <td>13+</td>
+        </tr>
+        <tr>
+          <td>Codenames</td>
+          <td>Czech Games Edition</td>
+          <td>2015</td>
+          <td>2500</td>
+          <td>2</td>
+          <td>8</td>
+          <td>14+</td>
+        </tr>
+        <tr>
+          <td>Splendor</td>
+          <td>Space Cowboys</td>
+          <td>2014</td>
+          <td>2800</td>
+          <td>2</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Мистериум</td>
+          <td>Rebel.pl</td>
+          <td>2016</td>
+          <td>3500</td>
+          <td>2</td>
+          <td>7</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Гномы на грани</td>
+          <td>Z-Man Games</td>
+          <td>2014</td>
+          <td>3000</td>
+          <td>2</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Древний ужас</td>
+          <td>Fantasy Flight Games</td>
+          <td>2015</td>
+          <td>6000</td>
+          <td>1</td>
+          <td>5</td>
+          <td>14+</td>
+        </tr>
+        <tr>
+          <td>Героический путь</td>
+          <td>AEG</td>
+          <td>2013</td>
+          <td>4000</td>
+          <td>2</td>
+          <td>4</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Риск</td>
+          <td>Hasbro</td>
+          <td>1957</td>
+          <td>1500</td>
+          <td>2</td>
+          <td>6</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Сет</td>
+          <td>Set Enterprises</td>
+          <td>1991</td>
+          <td>2000</td>
+          <td>1</td>
+          <td>8</td>
+          <td>6+</td>
+        </tr>
+        <tr>
+          <td>В поисках Эльдорадо</td>
+          <td>Ravensburger</td>
+          <td>2000</td>
+          <td>2500</td>
+          <td>2</td>
+          <td>4</td>
+          <td>8+</td>
+        </tr>
+        <tr>
+          <td>Империя</td>
+          <td>AEG</td>
+          <td>2012</td>
+          <td>4000</td>
+          <td>2</td>
+          <td>4</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Бункер</td>
+          <td>Rebel.pl</td>
+          <td>2016</td>
+          <td>3500</td>
+          <td>3</td>
+          <td>8</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Долина Багдад</td>
+          <td>Queen Games</td>
+          <td>2014</td>
+          <td>3000</td>
+          <td>2</td>
+          <td>5</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Мосты</td>
+          <td>Ravensburger</td>
+          <td>2016</td>
+          <td>2700</td>
+          <td>2</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Мифы</td>
+          <td>Fantasy Flight Games</td>
+          <td>2006</td>
+          <td>4500</td>
+          <td>2</td>
+          <td>6</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Городские легенды</td>
+          <td>Dream games</td>
+          <td>2020</td>
+          <td>3200</td>
+          <td>3</td>
+          <td>6</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Война миров</td>
+          <td>GMT Games</td>
+          <td>2018</td>
+          <td>5000</td>
+          <td>2</td>
+          <td>6</td>
+          <td>14+</td>
+        </tr>
+        <tr>
+          <td>Корабли войны</td>
+          <td>Cool Mini or Not</td>
+          <td>2017</td>
+          <td>4500</td>
+          <td>2</td>
+          <td>6</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Легенды о драконах</td>
+          <td>Dragon Games</td>
+          <td>2019</td>
+          <td>5000</td>
+          <td>2</td>
+          <td>5</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Остров сокровищ</td>
+          <td>Treasure island Games</td>
+          <td>2021</td>
+          <td>3800</td>
+          <td>2</td>
+          <td>6</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Путешествие по времени</td>
+          <td>Time Travelers</td>
+          <td>2022</td>
+          <td>4200</td>
+          <td>2</td>
+          <td>4</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Звёздные войны: Империя</td>
+          <td>Galactic Games</td>
+          <td>2018</td>
+          <td>6000</td>
+          <td>2</td>
+          <td>6</td>
+          <td>14+</td>
+        </tr>
+        <tr>
+          <td>Кулинарные битвы</td>
+          <td>chef`s Challenge</td>
+          <td>2020</td>
+          <td>3000</td>
+          <td>2</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Мифические существа</td>
+          <td>Mythical Creatures</td>
+          <td>2021</td>
+          <td>4500</td>
+          <td>3</td>
+          <td>5</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Стратегия на выживание</td>
+          <td>Survival Strategy</td>
+          <td>2019</td>
+          <td>4000</td>
+          <td>2</td>
+          <td>6</td>
+          <td>14+</td>
+        </tr>
+        <tr>
+          <td>Тайны древнего мира</td>
+          <td>Ancient Mysteries</td>
+          <td>2020</td>
+          <td>3500</td>
+          <td>2</td>
+          <td>5</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Галактические войны</td>
+          <td>Cosmic Battles</td>
+          <td>2021</td>
+          <td>5000</td>
+          <td>2</td>
+          <td>6</td>
+          <td>14+</td>
+        </tr>
+        <tr>
+          <td>Путешествие в подземелья</td>
+          <td>Dungeon Quest</td>
+          <td>2018</td>
+          <td>4500</td>
+          <td>1</td>
+          <td>5</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Охота на монстров</td>
+          <td>Monster hunt</td>
+          <td>2020</td>
+          <td>4000</td>
+          <td>2</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Королевская битва</td>
+          <td>Royal Battle</td>
+          <td>2021</td>
+          <td>3000</td>
+          <td>3</td>
+          <td>8</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Загадки древности</td>
+          <td>Ancient Puzzles</td>
+          <td>2019</td>
+          <td>2500</td>
+          <td>1</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>В поисках приключений</td>
+          <td>Adventures seekers</td>
+          <td>2020</td>
+          <td>3200</td>
+          <td>2</td>
+          <td>6</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Сказочные миры</td>
+          <td>Fairy tale Worlds</td>
+          <td>2021</td>
+          <td>3700</td>
+          <td>2</td>
+          <td>5</td>
+          <td>8+</td>
+        </tr>
+        <tr>
+          <td>Война кланов</td>
+          <td>Clan Wars</td>
+          <td>2022</td>
+          <td>4800</td>
+          <td>3</td>
+          <td>6</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Тайна заюрошенного замка</td>
+          <td>Mistery of the Castles</td>
+          <td>2020</td>
+          <td>4000</td>
+          <td>2</td>
+          <td>5</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Лаюиринт приключений</td>
+          <td>Adventures Labyrinth</td>
+          <td>2021</td>
+          <td>3500</td>
+          <td>2</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Остров чудес</td>
+          <td>Island of Wonders</td>
+          <td>2022</td>
+          <td>3900</td>
+          <td>2</td>
+          <td>6</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Время героев</td>
+          <td>Heroes of Time</td>
+          <td>2021</td>
+          <td>4500</td>
+          <td>2</td>
+          <td>5</td>
+          <td>12+</td>
+        </tr>
+        <tr>
+          <td>Секреты магии</td>
+          <td>Secrets of magic</td>
+          <td>2020</td>
+          <td>3000</td>
+          <td>2</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Путешествие в будущее</td>
+          <td>Journey to the Future</td>
+          <td>2021</td>
+          <td>5000</td>
+          <td>2</td>
+          <td>6</td>
+          <td>14+</td>
+        </tr>
+        <tr>
+          <td>В поисках артефактов</td>
+          <td>Z-Man Games</td>
+          <td>2014</td>
+          <td>3000</td>
+          <td>2</td>
+          <td>4</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>Заполучить мяч</td>
+          <td>Buhs</td>
+          <td>1956</td>
+          <td>11000</td>
+          <td>2</td>
+          <td>3</td>
+          <td>16+</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
