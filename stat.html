@@ -8,8 +8,9 @@
       <fieldset>
         <legend><a href="#" target="_self">Статистика</a></legend>
         <ul>
-          <li><a href="earned_game.html" target="_self">Самая продаваемая настольная игра</a></li>
           <li><a href="main.html" target="_self">Главная страница</a></li>
+          <li><a href="#">Статистика</a></li>
+          <li><a href="earned_game.html" target="_self">Самая продаваемая настольная игра</a></li>
         </ul>
       </fieldset>
     </form>
@@ -47,7 +48,7 @@
           Название: <input type="text" name="name"><br>
         </label>
         <label>
-          Тип:<input type="text" name="type"><br>
+          Комнанпия:<input type="text" name="type"><br>
         </label>
         <label>
           Количество игроков: от <input type="number" name="min" min="1" max="20">
@@ -61,7 +62,24 @@
         <label>
           до <input type="number" name="max_price" min="0"><br>
         </label>
+        <label>
+          Год Выпуска:<input type="text" name="type"><br>
+        </label>
+        <label>
+          Комнанпия:<input type="text" name="type"><br>
+        </label>
+        <label>
+          Рейтинг:
+          <select name="parametr_0">
+            <option value="0">0</option>
+            <option value="1">6+</option>
+            <option value="2">12+</option>
+            <option value="2">16+</option>
+            <option value="2">18+</option>
+          </select>
+        </label>
         <input type="button" value="Найти">
+
       </form>
     </details>
 
@@ -74,6 +92,10 @@
             <option value="0">Год</option>
             <option value="1">Цена</option>
             <option value="2">Количество игроков</option>
+            <option value="3">Комнанпия</option>
+            <option value="4">Рейтинг</option>
+            <option value="5">Название игры</option>
+            <option value="6">Название компании</option>
           </select>
         </label>
         <label>По убыванию? <input type="checkbox" name="decreasing" value="0"></label>
@@ -85,6 +107,10 @@
             <option value="0">Год</option>
             <option value="1">Цена</option>
             <option value="2">Количество игроков</option>
+            <option value="3">Комнанпия</option>
+            <option value="4">Рейтинг</option>
+            <option value="5">Название игры</option>
+            <option value="6">Название компании</option>
           </select>
         </label>
         <label>По убыванию? <input type="checkbox" name="decreasing" value="1"></label>
@@ -96,6 +122,10 @@
             <option value="0">Год</option>
             <option value="1">Цена</option>
             <option value="2">Количество игроков</option>
+            <option value="3">Комнанпия</option>
+            <option value="4">Рейтинг</option>
+            <option value="5">Название игры</option>
+            <option value="6">Название компании</option>
           </select>
         </label>
         <label>По убыванию? <input type="checkbox" name="decreasing" value="2"></label>
@@ -104,7 +134,7 @@
       </form>
     </details>
 
-    <table align="center" border=4>
+    <table align="center" border=1 cellspacing=0>
       <thead>
         <tr>
           <th>Название игры</th>
