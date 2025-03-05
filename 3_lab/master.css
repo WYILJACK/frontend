@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Устанавливает box-sizing для всех элементов */
+    font-family: sans-serif;
+}
+
+.page {
+  display: block;
+  width: 80%;
+  height: 120vh;
+  margin:30px auto;
+  border: thin grey solid;
+}
+
+.header {
+  background: url(background.avif) no-repeat;
+  background-size: cover;
+  height: 28%;
+  margin-bottom: 1%;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 3vh;
+
+}
+
+.header div {
+  height: 33.33%;
+  padding-right: 5px;
+}
+
+.header ul {
+  text-align: right;
+}
+
+.header li {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px;
+  background:  rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.header .head {
+  padding: 5px;
+  background:  rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.header .head:hover{
+  background:  rgba(255, 255, 255, 1);
+}
+
+.header li:hover {
+  background:  rgba(255, 255, 255, 1);
+}
+
+.main {
+  height:70%;
+  width:100%;
+}
+
+.main-info {
+  height: 47%;
+  width: 100%;
+}
+
+.main-info div {
+  height: 60%;
+  width: 60%;
+  overflow: hidden;
+  margin:1% auto;
+  text-align: center;
+  margin-bottom: 0;
+  border-radius: 10px;
+}
+
+.main-info .text{
+  height: 25%;
+}
+
+.main-info div img{
+  width: 100%;
+}
+
+.main-info  p{
+  text-align: justify;
+  text-align-last: center;
+  font-size: 2vh;
+  margin-bottom: 2%;
+}
+
+.main-info span{
+  display: block;
+  text-align: center;
+}
+
+.main-info h2{
+  font-size: 3vh;
+}
+
+.cards {
+  height: 53%;
+  width: 80%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.block {
+  height: 40%;
+  width: 30%;
+  float: left;
+  border: 2px solid grey;
+  border-radius: 10px;
+  margin: 0.8% 1.2%;
+  font-size: 3vh;
+}
+
+.block img {
+  display: block;
+  width: 40%;
+  height: 50%;
+  margin: 5px;
+  float: left;
+}
+
+.block span{
+  display: block;
+  text-align: center;
+  padding: 5%;
+}
+
+.block p{
+  padding: 10px;
+  font-size: 1.5vh;
+  text-align: justify;
+  clear: both;
+}
