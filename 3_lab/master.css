@@ -16,17 +16,17 @@
 .header {
   background: url(background.avif) no-repeat;
   background-size: cover;
-  height: 28%;
   margin-bottom: 1%;
   text-align: center;
   border-radius: 10px;
-  font-size: 3vh;
+  font-size: 1.5vh;
+  height: 20%;
 
 }
 
 .header div {
-  height: 33.33%;
   padding-right: 5px;
+  margin-top: 100px;
 }
 
 .header ul {
@@ -34,17 +34,26 @@
 }
 
 .header li {
-  display: inline-block;
+  display: inline;
   margin: 10px 0;
   padding: 10px;
   background:  rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
 
+.header .active {
+
+}
+
+.header ul :nth-child(1){
+  color: rgb(199,21,133);
+}
+
 .header .head {
   padding: 5px;
   background:  rgba(255, 255, 255, 0.8);
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .header .head:hover{
@@ -63,6 +72,7 @@
 .main-info {
   height: 47%;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .main-info div {
@@ -100,39 +110,61 @@
 }
 
 .cards {
-  height: 53%;
+  height: auto;
   width: 80%;
   margin: 0 auto;
-  overflow: auto;
+  font-size: 0;
+}
+
+.up, .down{
+  width: 100%;
+  margin-bottom: 1%;
 }
 
 .block {
-  height: 40%;
-  width: 30%;
-  float: left;
-  border: 2px solid grey;
-  border-radius: 10px;
-  margin: 0.8% 1.2%;
-  font-size: 3vh;
+  display: inline-block;
+width: 32%;
+vertical-align: top;
+border: 2px solid grey;
+border-radius: 10px;
+margin: 0 0.5%;
+font-size: 1.5vh;
+box-sizing: border-box;
+
+}
+
+.block:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.block:nth-child(3n) {
+  margin-right: 0;
 }
 
 .block img {
-  display: block;
   width: 40%;
-  height: 50%;
+  height: auto;
   margin: 5px;
-  float: left;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.conteiner {
+  white-space: nowrap;
 }
 
 .block span{
-  display: block;
-  text-align: center;
-  padding: 5%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 55%;
+  white-space: nowrap;
+  padding: 2%;
+  font-size: 1.7vh;
 }
 
 .block p{
   padding: 10px;
-  font-size: 1.5vh;
+  font-size: 1.3vh;
   text-align: justify;
   clear: both;
 }
